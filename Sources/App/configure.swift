@@ -19,6 +19,9 @@ public func configure(_ app: Application) async throws {
     ), as: .psql)
 
     app.migrations.add(CreateTodo())
+    app.migrations.add(CreateUser())
+    app.migrations.add(CreateArticle())
+    app.migrations.add(CreateComment())
 
     app.views.use(.leaf)
 
